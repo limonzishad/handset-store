@@ -27,21 +27,21 @@ const Header = () => {
                         <img className="w-100 h-25 img-border" src={banner1} alt="banner-1"
                         />
                         <Carousel.Caption className="text-warning fw-bold py-5">
-                            <h3>NEW ARRIVALS</h3>
+                            <h3 style={{ fontWeight: 700 }}>NEW ARRIVALS</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img className="w-100 h-25 img-border" src={banner2} alt="banner-2"
                         />
                         <Carousel.Caption className="text-warning fw-bold py-5">
-                            <h3>DISCOUNTS</h3>
+                            <h3 style={{ fontWeight: 700 }}>DISCOUNTS</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img className="w-100 h-25 img-border" src={banner3} alt="banner-3"
                         />
                         <Carousel.Caption className="text-warning fw-bold py-5">
-                            <h3>LATEST TECHNOLOGY</h3>
+                            <h3 style={{ fontWeight: 700 }}>LATEST TECHNOLOGY</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

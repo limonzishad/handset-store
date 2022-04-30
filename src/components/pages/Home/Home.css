@@ -1,0 +1,44 @@
+.custom-title {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.custom-card-group {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.custom-card {
+    width: 30%;
+    border: 1px solid rgb(135, 197, 222);
+    border-radius: 15px;
+}
+
+.statistic-container {
+    text-align: center;
+    margin: 5% auto;
+    margin-top: 0;
+    padding: 3%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    border: 1px solid rgb(135, 197, 222);
+    border-radius: 15px;
+}
+
+.stat {
+    background-color: black;
+    color: white;
+    padding: 5%;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.vl {
+    border-left: 2px solid;
+}
