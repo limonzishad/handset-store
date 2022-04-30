@@ -1,0 +1,13 @@
+.bg-color {
+    background-color: #ede7f6;
+    border-radius: 15px;
+}
+
+.active-color:hover {
+    background-color: #bbb5c3;
+    border-radius: 15px;
+}
+
+.img-border {
+    border-radius: 15px;
+}
