@@ -1,13 +1,41 @@
 import React from "react";
 import './Home.css';
-import { Card } from "react-bootstrap";
+import { Card, Carousel } from "react-bootstrap";
 import Footer from "../../shared/Footer/Footer";
-import Header from "../../shared/Header/Header";
+import banner1 from '../../../images/banner-1.png';
+import banner2 from '../../../images/banner-2.png';
+import banner3 from '../../../images/banner-3.png';
 
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+            {/* banner section */}
+            <div>
+                <Carousel>
+                    <Carousel.Item>
+                        <img className="w-100 h-25 img-border" src={banner1} alt="banner-1"
+                        />
+                        <Carousel.Caption className="text-warning fw-bold py-5">
+                            <h3 style={{ fontWeight: 700 }}>NEW ARRIVALS</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="w-100 h-25 img-border" src={banner2} alt="banner-2"
+                        />
+                        <Carousel.Caption className="text-warning fw-bold py-5">
+                            <h3 style={{ fontWeight: 700 }}>DISCOUNTS</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="w-100 h-25 img-border" src={banner3} alt="banner-3"
+                        />
+                        <Carousel.Caption className="text-warning fw-bold py-5">
+                            <h3 style={{ fontWeight: 700 }}>LATEST TECHNOLOGY</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+
             {/* upcoming phone section */}
             <div>
                 <h2 className="custom-title">UPCOMING PHONES</h2>
@@ -50,22 +78,25 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
             {/* statistics section */}
-            <h2 className="custom-title">PRODUCT STATISTICS</h2>
-            <div className="statistic-container mt-3">
-                <div className="stat">
-                    <h3 style={{ fontSize: "50px", fontWeight: 700 }}>350+</h3>
-                    <p>MODELS</p>
-                </div>
-                <div className="vl"></div>
-                <div className="stat">
-                    <h3 style={{ fontSize: "50px", fontWeight: 700 }}>30+</h3>
-                    <p>TOP BRANDS</p>
-                </div>
-                <div className="vl"></div>
-                <div className="stat">
-                    <h3 style={{ fontSize: "50px", fontWeight: 700 }}>50+</h3>
-                    <p>LATEST DEVICES</p>
+            <div>
+                <h2 className="custom-title">PRODUCT STATISTICS</h2>
+                <div className="statistic-container mt-3">
+                    <div className="stat">
+                        <h3 style={{ fontSize: "50px", fontWeight: 700 }}>350+</h3>
+                        <p>MODELS</p>
+                    </div>
+                    <div className="vl"></div>
+                    <div className="stat">
+                        <h3 style={{ fontSize: "50px", fontWeight: 700 }}>30+</h3>
+                        <p>TOP BRANDS</p>
+                    </div>
+                    <div className="vl"></div>
+                    <div className="stat">
+                        <h3 style={{ fontSize: "50px", fontWeight: 700 }}>50+</h3>
+                        <p>LATEST DEVICES</p>
+                    </div>
                 </div>
             </div>
             <Footer></Footer>

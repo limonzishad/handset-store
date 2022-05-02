@@ -1,52 +1,50 @@
 import React from "react";
 import './Header.css';
-import { Carousel, Container, Nav, Navbar } from "react-bootstrap";
-import banner1 from '../../../images/banner-1.png';
-import banner2 from '../../../images/banner-2.png';
-import banner3 from '../../../images/banner-3.png';
+import { Link } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+    let addItems;
+    let allItems;
+    let manageItems;
+
+    const [user] = useAuthState(auth);
+    const handleLogout = () => {
+        signOut(auth);
+    };
+
+    if (!user) {
+        addItems = <Nav.Link className="active-color" as={Link} to="/add-items">ADD ITEMS</Nav.Link>;
+        allItems = <Nav.Link className="active-color" as={Link} to="/all-items">ALL ITEMS</Nav.Link>;
+        manageItems = <Nav.Link className="active-color" as={Link} to="/manage-items">MANAGE ITEMS</Nav.Link>;
+    }
+
     return (
-        <div>
-            <div>
-                <Navbar className="bg-color" expand="lg">
-                    <Container>
-                        <Navbar.Brand href="#home">HANDSET STORE</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="ms-auto active-color">
-                                <Nav.Link href="#home">HOME</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-            </div>
-            <div>
-                <Carousel>
-                    <Carousel.Item>
-                        <img className="w-100 h-25 img-border" src={banner1} alt="banner-1"
-                        />
-                        <Carousel.Caption className="text-warning fw-bold py-5">
-                            <h3 style={{ fontWeight: 700 }}>NEW ARRIVALS</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="w-100 h-25 img-border" src={banner2} alt="banner-2"
-                        />
-                        <Carousel.Caption className="text-warning fw-bold py-5">
-                            <h3 style={{ fontWeight: 700 }}>DISCOUNTS</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="w-100 h-25 img-border" src={banner3} alt="banner-3"
-                        />
-                        <Carousel.Caption className="text-warning fw-bold py-5">
-                            <h3 style={{ fontWeight: 700 }}>LATEST TECHNOLOGY</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </div>
-        </div>
+        <Navbar className="bg-color" expand="lg">
+            <Container>
+                <Navbar.Brand as={Link} to="/">HANDSET STORE</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Nav.Link className="active-color" as={Link} to="/">HOME</Nav.Link>
+                        {addItems}
+                        {allItems}
+                        {manageItems}
+                        <Nav.Link className="active-color" as={Link} to="/blogs">BLOGS</Nav.Link>
+                        <Nav.Link className="active-color" as={Link} to="/about">ABOUT</Nav.Link>
+                        {
+                            user ?
+                                <Nav.Link onClick={handleLogout}>LOGOUT</Nav.Link>
+                                :
+                                <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
+                        }
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 
