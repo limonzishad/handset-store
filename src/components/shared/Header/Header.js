@@ -16,7 +16,7 @@ const Header = () => {
         signOut(auth);
     };
 
-    if (!user) {
+    if (user) {
         addItems = <Nav.Link className="active-color" as={Link} to="/add-items">ADD ITEMS</Nav.Link>;
         allItems = <Nav.Link className="active-color" as={Link} to="/all-items">ALL ITEMS</Nav.Link>;
         manageItems = <Nav.Link className="active-color" as={Link} to="/manage-items">MANAGE ITEMS</Nav.Link>;
@@ -37,9 +37,9 @@ const Header = () => {
                         <Nav.Link className="active-color" as={Link} to="/about">ABOUT</Nav.Link>
                         {
                             user ?
-                                <Nav.Link onClick={handleLogout}>LOGOUT</Nav.Link>
+                                <Nav.Link className="active-color" onClick={handleLogout}>LOGOUT</Nav.Link>
                                 :
-                                <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
+                                <Nav.Link className="active-color" as={Link} to="/login">LOGIN</Nav.Link>
                         }
                     </Nav>
                 </Navbar.Collapse>

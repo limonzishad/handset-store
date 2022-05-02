@@ -4,12 +4,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, sendEmailVerification, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from "../../../../firebase.init";
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer } from 'react-toastify';
 
 const Register = () => {
     let errorMessage;
     let loadingMessage;
 
-    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { emailVerificationOptions: true });
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const [sendEmailVerification] = useSendEmailVerification(auth);
 
@@ -69,7 +70,7 @@ const Register = () => {
                 <p className="mt-3">Already have an account? <Link to="/login" className="text-primary text-decoration-none" onClick={navigateToLogin}>Login</Link></p>
             </Form>
             <div className="w-25 mx-auto"><SocialLogin></SocialLogin></div>
-            {/* <ToastContainer /> */}
+            <ToastContainer />
         </div>
     );
 };

@@ -1,12 +1,15 @@
 import React from "react";
 import './Home.css';
+import useItem from '../../../hooks/useItem';
 import { Card, Carousel } from "react-bootstrap";
+import Item from '../Item/Item';
 import Footer from "../../shared/Footer/Footer";
 import banner1 from '../../../images/banner-1.png';
 import banner2 from '../../../images/banner-2.png';
 import banner3 from '../../../images/banner-3.png';
 
 const Home = () => {
+    const [items] = useItem();
     return (
         <div>
             {/* banner section */}
@@ -36,11 +39,20 @@ const Home = () => {
                 </Carousel>
             </div>
 
+            {/* item section */}
+            <div>
+                <h2 className="custom-title">COURSES</h2>
+                <div className="mt-3 item-container">
+                    {
+                        items.slice(0, 6).map(item => <Item key={item.id} item={item}></Item>)
+                    }
+                </div>
+            </div>
             {/* upcoming phone section */}
             <div>
                 <h2 className="custom-title">UPCOMING PHONES</h2>
                 <div className="mx-auto mt-3 custom-card-group">
-                    <div className="custom-card">
+                    <div className="custom-card component-shadow">
                         <div className="mt-2 text-center">
                             <img src="https://i.gadgets360cdn.com/products/large/realme-v25-709x800-1646304410.jpg?downsize=*:180" alt="" />
                         </div>
@@ -52,7 +64,7 @@ const Home = () => {
                             </Card.Text>
                         </Card.Body>
                     </div>
-                    <div className="custom-card">
+                    <div className="custom-card component-shadow">
                         <div className="mt-2 text-center">
                             <img src="https://i.gadgets360cdn.com/products/large/realme-v25-709x800-1646304410.jpg?downsize=*:180" alt="" />
                         </div>
@@ -64,7 +76,7 @@ const Home = () => {
                             </Card.Text>
                         </Card.Body>
                     </div>
-                    <div className="custom-card">
+                    <div className="custom-card component-shadow">
                         <div className="mt-2 text-center">
                             <img src="https://i.gadgets360cdn.com/products/large/realme-v25-709x800-1646304410.jpg?downsize=*:180" alt="" />
                         </div>
@@ -82,7 +94,7 @@ const Home = () => {
             {/* statistics section */}
             <div>
                 <h2 className="custom-title">PRODUCT STATISTICS</h2>
-                <div className="statistic-container mt-3">
+                <div className="statistic-container mt-3 component-shadow">
                     <div className="stat">
                         <h3 style={{ fontSize: "50px", fontWeight: 700 }}>350+</h3>
                         <p>MODELS</p>

@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react';
-import './Login.css';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef("");
@@ -46,10 +47,10 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            // toast("Email Sent");
+            toast(<div style={{ fontFamily: "Operator Mono" }}>Email sent to {email}</div>);
         }
         else {
-            // toast("Please Enter Your Email");
+            toast(<div style={{ fontFamily: "Operator Mono" }}>Please enter your email address.</div>);
         }
     };
 
@@ -66,7 +67,6 @@ const Login = () => {
     return (
         <div>
             <h1 className="text-center mt-5">Please Login</h1>
-            <hr className="w-25 mx-auto mb-4 text-info"></hr>
             <Form className="w-25 mx-auto" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -87,7 +87,7 @@ const Login = () => {
                 <p className="mt-3">Forgotten password? <Link to="" className="text-primary text-decoration-none" onClick={resetPassword}>Reset Password</Link></p>
             </Form>
             <div className="w-25 mx-auto"><SocialLogin></SocialLogin></div>
-            {/* <ToastContainer /> */}
+            <ToastContainer />
         </div>
     );
 };

@@ -1,0 +1,31 @@
+.custom-border {
+    border: 1px solid rgb(135, 197, 222);
+    border-radius: 15px;
+}
+
+.cards-container {
+    margin-top: 15px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-container h1 {
+    margin-bottom: 0;
+}
+
+.item-text {
+    margin: 0;
+    padding: 15px;
+    text-align: justify;
+}
+
+.cards-container img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.component-shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
