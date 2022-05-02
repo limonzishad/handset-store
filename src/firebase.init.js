@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCuX1jlj0rPLLGoFurepjPaeShAz3hHYXU",
-    authDomain: "handset-store.firebaseapp.com",
-    projectId: "handset-store",
-    storageBucket: "handset-store.appspot.com",
-    messagingSenderId: "425942236945",
-    appId: "1:425942236945:web:c77c576cfd6fd05d0d96b0"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
