@@ -1,0 +1,17 @@
+.delete-btn {
+    padding: 5px;
+    background: red;
+    border: 1px solid red;
+    border-radius: 100%;
+}
+
+.delete-btn:hover {
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 100%;
+}
+
+.btn-col {
+    width: 0;
+    margin: 0;
+}

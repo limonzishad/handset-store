@@ -22,7 +22,8 @@
     text-align: center;
     margin: 5% auto;
     margin-top: 0;
-    padding: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     width: 95%;
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@
     color: white;
     padding: 5%;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .vl {
@@ -52,7 +53,7 @@
     gap: 25px;
 }
 
-button {
+.common-button {
     background-color: rgba(105, 79, 232, 0.8);
     color: white;
     font-weight: 700;
@@ -62,7 +63,7 @@ button {
     margin-bottom: 75px;
 }
 
-button:hover {
+.common-button:hover {
     background-color: white;
     color: black;
     font-weight: 700;

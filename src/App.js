@@ -10,6 +10,8 @@ import About from './components/pages/About/About';
 import Login from './components/pages/Logins/Login/Login';
 import Register from './components/pages/Logins/Register/Register';
 import NotFound from './components/pages/NotFound/NotFound';
+import RequireAuth from './components/pages/Logins/RequireAuth/RequireAuth';
+import Inventory from './components/pages/Inventory/Inventory';
 
 function App() {
   return (
@@ -24,10 +26,15 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/inventory/:id" element={
+          <RequireAuth>
+            <Inventory />
+          </RequireAuth>
+        }></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

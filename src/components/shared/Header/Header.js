@@ -39,7 +39,7 @@ const Header = () => {
                             user ?
                                 <Nav.Link className="active-color" onClick={handleLogout}>LOGOUT</Nav.Link>
                                 :
-                                <Nav.Link className="active-color" as={Link} to="/login">LOGIN</Nav.Link>
+                                <Nav.Link className="active-color" as={Link} to="/login">LOGIN/REGISTER</Nav.Link>
                         }
                     </Nav>
                 </Navbar.Collapse>

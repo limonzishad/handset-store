@@ -1,10 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './Item.css';
-import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
-const Item = (props) => {
-    const { id, name, details, img, price } = props.item;
+const Item = ({ item }) => {
+    const { id, name, details, img, price } = item;
+    const navigate = useNavigate();
+    const showItemDetails = (id) => {
+        navigate(`/inventory/${id}`);
+    };
+
     return (
         <div>
             <div className="component-shadow custom-border">
@@ -14,10 +18,11 @@ const Item = (props) => {
                 </div>
                 <p className="item-text">{details}</p>
                 <p className="item-text">Price: {price}</p>
-                <div><Link to="/enroll"><button variant="primary" className="w-100 mx-auto custom-border">UPDATE</button></Link></div>
+                <div><button onClick={() => { showItemDetails(id) }} variant="primary" className="w-100 mx-auto common-button custom-border" style={{ margin: '0', padding: '5px' }}>UPDATE
+                </button></div>
             </div >
         </div >
     );
-}
+};
 
 export default Item;

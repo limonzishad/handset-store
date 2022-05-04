@@ -94,19 +94,19 @@ const Home = () => {
             {/* statistics section */}
             <div>
                 <h2 className="custom-title">PRODUCT STATISTICS</h2>
-                <div className="statistic-container mt-3 component-shadow">
+                <div className="w-75 statistic-container mt-3 component-shadow">
                     <div className="stat">
-                        <h3 style={{ fontSize: "50px", fontWeight: 700 }}>350+</h3>
+                        <h3 style={{ fontSize: "35px", fontWeight: 700 }}>350+</h3>
                         <p>MODELS</p>
                     </div>
                     <div className="vl"></div>
                     <div className="stat">
-                        <h3 style={{ fontSize: "50px", fontWeight: 700 }}>30+</h3>
+                        <h3 style={{ fontSize: "35px", fontWeight: 700 }}>30+</h3>
                         <p>TOP BRANDS</p>
                     </div>
                     <div className="vl"></div>
                     <div className="stat">
-                        <h3 style={{ fontSize: "50px", fontWeight: 700 }}>50+</h3>
+                        <h3 style={{ fontSize: "35px", fontWeight: 700 }}>50+</h3>
                         <p>LATEST DEVICES</p>
                     </div>
                 </div>
