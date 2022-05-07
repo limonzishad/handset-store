@@ -19,7 +19,7 @@ const Item = ({ item }) => {
                 <p className="item-text">Description: {description}</p>
                 <p className="item-text">Quantity: {quantity}</p>
                 <p className="item-text">Price: {price}</p>
-                <div><button onClick={() => { showItemDetails(_id) }} variant="primary" className="w-100 mx-auto common-button custom-border" style={{ margin: '0', padding: '5px' }}>UPDATE
+                <div className="w-75 mx-auto"><button onClick={() => { showItemDetails(_id) }} variant="primary" className="w-100 mx-auto mb-1 common-button custom-border" style={{ margin: '0', padding: '5px' }}>UPDATE
                 </button></div>
             </div >
         </div >
