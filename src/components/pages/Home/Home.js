@@ -44,7 +44,7 @@ const Home = () => {
                 <h2 className="custom-title">COURSES</h2>
                 <div className="mt-3 item-container">
                     {
-                        items.slice(0, 6).map(item => <Item key={item.id} item={item}></Item>)
+                        items.slice(0, 6).map(item => <Item key={item._id} item={item}></Item>)
                     }
                 </div>
             </div>
