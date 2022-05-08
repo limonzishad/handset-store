@@ -26,7 +26,10 @@ const Inventory = () => {
             body: JSON.stringify({ quantity }),
         })
             .then((res) => res.json())
-            .then((data) => setItem(data));
+            .then((data) => {
+                setItem(data);
+                event.target.reset();
+            });
     };
 
     const handleDeliveredButton = () => {
@@ -56,7 +59,7 @@ const Inventory = () => {
                 <p className="item-text">Supplier: {item.supplier}</p>
                 <p className="item-text">Model: {item.name}</p>
                 <p className="item-text">Price: {item.price}</p>
-                <p className="item-text">Quantity: {item.quantity}</p>
+                <p className="item-text">Stock: {item.quantity}</p>
                 <p className="item-text">Sold: {item.sold}</p>
                 <p className="item-text">Description: {item.description}</p>
                 <div className="w-50 mx-auto"><button onClick={handleDeliveredButton} variant="primary" className="bg-danger w-100 mx-auto p-1 common-button custom-border" style={{ margin: '0', padding: '0' }}>DELIVERED</button></div>

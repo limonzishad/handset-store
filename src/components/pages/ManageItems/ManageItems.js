@@ -32,8 +32,9 @@ const ManageItems = () => {
                         <th>NAME</th>
                         <th>SUPPLIER</th>
                         <th>PRICE</th>
-                        <th>QUANTITY</th>
+                        <th>STOCK</th>
                         <th>SOLD</th>
+                        <th>ADDED BY</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -45,6 +46,7 @@ const ManageItems = () => {
                             <td className="text-center">{item.price}</td>
                             <td className="text-center">{item.quantity}</td>
                             <td className="text-center">{item.sold}</td>
+                            <td>{item.addedBy}</td>
                             <td className="btn-col"><button onClick={() => { deleteItem(item._id) }} className="delete-btn common-button" style={{ margin: '0' }}><FontAwesomeIcon icon={faTrash} /></button></td>
                         </tr>)
                     }

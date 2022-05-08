@@ -12,6 +12,7 @@ import Register from './components/pages/Logins/Register/Register';
 import NotFound from './components/pages/NotFound/NotFound';
 import RequireAuth from './components/pages/Logins/RequireAuth/RequireAuth';
 import Inventory from './components/pages/Inventory/Inventory';
+import MyItems from './components/pages/MyItems/MyItems';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
         <Route path="/manage-items" element={
           <RequireAuth>
             <ManageItems />
+          </RequireAuth>}></Route>
+        <Route path="/my-items" element={
+          <RequireAuth>
+            <MyItems />
           </RequireAuth>}></Route>
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />

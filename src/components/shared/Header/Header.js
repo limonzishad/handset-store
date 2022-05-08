@@ -10,6 +10,7 @@ const Header = () => {
     let addItems;
     let allItems;
     let manageItems;
+    let myItems;
 
     const [user] = useAuthState(auth);
     const handleLogout = () => {
@@ -20,6 +21,7 @@ const Header = () => {
         addItems = <Nav.Link className="active-color" as={Link} to="/add-items">ADD ITEMS</Nav.Link>;
         allItems = <Nav.Link className="active-color" as={Link} to="/all-items">ALL ITEMS</Nav.Link>;
         manageItems = <Nav.Link className="active-color" as={Link} to="/manage-items">MANAGE ITEMS</Nav.Link>;
+        myItems = <Nav.Link className="active-color" as={Link} to="/my-items">MY ITEMS</Nav.Link>;
     }
 
     return (
@@ -33,6 +35,7 @@ const Header = () => {
                         {addItems}
                         {allItems}
                         {manageItems}
+                        {myItems}
                         <Nav.Link className="active-color" as={Link} to="/blogs">BLOGS</Nav.Link>
                         <Nav.Link className="active-color" as={Link} to="/about">ABOUT</Nav.Link>
                         {
