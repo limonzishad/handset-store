@@ -5,7 +5,7 @@ const Inventory = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://floating-forest-85140.herokuapp.com/item/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -18,7 +18,7 @@ const Inventory = () => {
         event.preventDefault();
         const quantity = parseInt(event.target.quantity.value) + previousQuantity;
 
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://floating-forest-85140.herokuapp.com/item/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const Inventory = () => {
             const quantity = parseInt(previousQuantity) - 1;
             const sold = parseInt(previousSold) + 1;
 
-            fetch(`http://localhost:5000/item/${id}`, {
+            fetch(`https://floating-forest-85140.herokuapp.com/item/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

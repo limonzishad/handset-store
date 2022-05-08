@@ -52,42 +52,39 @@ const Home = () => {
             <div>
                 <h2 className="custom-title">UPCOMING PHONES</h2>
                 <div className="mx-auto mt-3 custom-card-group">
-                    <div className="custom-card component-shadow">
-                        <div className="mt-2 text-center">
-                            <img src="https://i.gadgets360cdn.com/products/large/realme-v25-709x800-1646304410.jpg?downsize=*:180" alt="" />
-                        </div>
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
-                            </Card.Text>
-                        </Card.Body>
-                    </div>
-                    <div className="custom-card component-shadow">
-                        <div className="mt-2 text-center">
-                            <img src="https://i.gadgets360cdn.com/products/large/realme-v25-709x800-1646304410.jpg?downsize=*:180" alt="" />
-                        </div>
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
-                            </Card.Text>
-                        </Card.Body>
-                    </div>
-                    <div className="custom-card component-shadow">
-                        <div className="mt-2 text-center">
-                            <img src="https://i.gadgets360cdn.com/products/large/realme-v25-709x800-1646304410.jpg?downsize=*:180" alt="" />
-                        </div>
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
-                            </Card.Text>
-                        </Card.Body>
-                    </div>
+                    <div>
+                        <div className="component-shadow custom-border">
+                            <div className="cards-container">
+                                <img src="https://i0.wp.com/www.mobiledor.com/wp-content/uploads/Apple-iPhone-SE-2020.jpg?w=225&ssl=1" alt="iPhone se 2020" />
+                            </div>
+                            <div>
+                                <h5 className="text-center">Apple iPhone SE 2020</h5>
+                                <p className="text-center">COMING SOON</p>
+                            </div>
+                        </div >
+                    </div >
+                    <div>
+                        <div className="component-shadow custom-border">
+                            <div className="cards-container">
+                                <img src="https://i0.wp.com/www.mobiledor.com/wp-content/uploads/OnePlus-7T.jpg?w=225&ssl=1" alt="iPhone se 2020" />
+                            </div>
+                            <div>
+                                <h5 className="text-center">OnePlus 7T</h5>
+                                <p className="text-center">COMING SOON</p>
+                            </div>
+                        </div >
+                    </div >
+                    <div>
+                        <div className="component-shadow custom-border">
+                            <div className="cards-container">
+                                <img src="https://i0.wp.com/www.mobiledor.com/wp-content/uploads/vivo-V23-5G.jpg?w=225&ssl=1" alt="v23 5g" />
+                            </div>
+                            <div>
+                                <h5 className="text-center">Vivo V23 5G</h5>
+                                <p className="text-center">COMING SOON</p>
+                            </div>
+                        </div >
+                    </div >
                 </div>
             </div>
 
@@ -99,12 +96,10 @@ const Home = () => {
                         <h3 style={{ fontSize: "35px", fontWeight: 700 }}>350+</h3>
                         <p>MODELS</p>
                     </div>
-                    <div className="vl"></div>
                     <div className="stat">
                         <h3 style={{ fontSize: "35px", fontWeight: 700 }}>30+</h3>
                         <p>TOP BRANDS</p>
                     </div>
-                    <div className="vl"></div>
                     <div className="stat">
                         <h3 style={{ fontSize: "35px", fontWeight: 700 }}>50+</h3>
                         <p>LATEST DEVICES</p>

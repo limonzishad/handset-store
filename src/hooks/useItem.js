@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useItem = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://floating-forest-85140.herokuapp.com/items')
             .then(response => response.json())
             .then(data => setItems(data));
     }, []);
